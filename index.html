@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Fashionasta Clothes</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="container">
+            <nav class="navbar">
+                <img class="logo" src="./images/logo.jpg" alt="Error">
+                <ul class="nav-links">
+                    <li id="home" onclick="home()" class="active"><a href="#"></a>Home</li>
+                    <li id="category" onclick="category()" class="active"><a href="#"></a>Category</li>
+                    <li id="blog" onclick="blogs()" class="active"><a href="#"></a>Blog</li>
+                    <li id="services" onclick="services()" class="active"><a href="#"></a>Services</li>
+                    <li id="contact" onclick="contact()" class="active"><a href="#"></a>Contact</li>
+                    <li id="cart"><i class="fa-solid fa-cart-shopping"></i></li>
+                </ul>
+            </nav>
+
+            <div class="main">
+                <div class="main-text">
+                    <h1 class="top">Get upto 45% </h1>
+                    <h2 class="top">off new products</h2>
+                    <p>The biggest sale of the year is at <span>Fashionasta Clothes</span></p>
+                    <button class="btn">Explore <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <div class="trend">
+                <div class="head">
+                    <h1>Trends <span>Men's Wear</span></h1>
+                </div>
+                <button id="btn1">Show More...</button>
+
+                <div class="card">
+                    <div class="crd">
+                        <img onclick="show(this)" class="image" src="./images/shirt1.jpg" alt="Error">
+                        <h2>Cotton Trending Shirt's</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <br>
+                        <button class="btn">Add to cart</button>
+                    </div>
+
+                    <div class="crd">
+                        <img onclick="show(this)" class="image" src="./images/shirt2.jpg" alt="Error">
+                        <h2>Cotton Trending Shirt's</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <br>
+                        <button class="btn">Add to cart</button>
+                    </div>
+
+                    <div class="crd">
+                        <img onclick="show(this)" class="image" src="./images/shirt3.webp" alt="Error">
+                        <h2>Cotton Trending Shirt's</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <br>
+                        <button class="btn">Add to cart</button>
+                    </div>
+
+                    <div class="crd">
+                        <img onclick="show(this)" class="image" src="./images/shirt5.webp" alt="Error">
+                        <h2>Cotton Trending Shirt's</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <br>
+                        <button class="btn">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="trend" id="trendSec">
+                <div class="head">
+                    <h1>Trends <span>Women's Wear</span></h1>
+                </div>
+                <button id="btn1">Show More...</button>
+
+                <div class="card">
+                    <div class="crd">
+                        <img onclick="show(this)" class="image" src="./images/dress1.webp" alt="Error">
+                        <h2>Trending Girl's Dress</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <br>
+                        <button class="btn">Add to cart</button>
+                    </div>
+
+                    <div class="crd">
+                        <img onclick="show(this)" class="image" src="./images/dress2.webp" alt="Error">
+                        <h2>Trending Girl's Dress</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <br>
+                        <button class="btn">Add to cart</button>
+                    </div>
+
+                    <div class="crd">
+                        <img onclick="show(this)" class="image" src="./images/dress3.jpg" alt="Error">
+                        <h2>Trending Girl's Dress</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <br>
+                        <button class="btn">Add to cart</button>
+                    </div>
+
+                    <div class="crd">
+                        <img onclick="show(this)" class="image" src="./images/dress5.webp" alt="Error">
+                        <h2>Trending Girl's Dress</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star-half-stroke"></i>
+                        <br>
+                        <button class="btn">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart">
+                <img class="newimg" src="" alt="">
+                <div class="cart-text">
+                    <h1>Trends Offer : Trending Shop</h1>
+                    <h1>Now</h1>
+                    <h2>Special Price</h2>
+                    <h2>$11</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, laboriosam.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, laboriosam.</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima, laboriosam.</p>
+                    <div class="button">
+                        <button>Buy Now</button>
+                        <button onclick="addcart()">Add to Cart</button>
+                    </div>
+                    <button class="back">Back</button>
+                </div>
+            </div>
+
+            <div class="trend trends">
+                <div class="head">
+                    <h1>Trends Top <span>Blog</span></h1>
+                </div>
+
+                <div class="card">
+                    <div class="card-blog">
+                        <div class="blog">
+                            <img src="./images/dress4.webp" alt="Error" class="img">
+                            <div class="blog-text">
+                                <h2>Trending Womens Clothes</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda modi, excepturi
+                                    deleniti doloremque reiciendis voluptate?</p>
+                                <a href="https://influencermarketinghub.com/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card-blog">
+                        <div class="blog">
+                            <img src="./images/shirt4.webp" alt="Error" class="img">
+                            <div class="blog-text">
+                                <h2>Trending Mens Clothes</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda modi, excepturi
+                                    deleniti doloremque reiciendis voluptate?</p>
+                                <a href="https://www.apetogentleman.com/">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div onclick="discount()" class="discount-news" id="news">
+                <div class="discount-news-box">
+                    <div class="discount-news-content">
+                        <p>80% discount on all products for the</p>
+                        <p>Big Brand Sale</p>
+                        <div class="time">
+                            <label>15 <span>:</span></label>
+                            <label>12 <span>:</span></label>
+                            <label>56 <span>:</span></label>
+                            <label>02 <span></span></label>
+                        </div>
+                    </div>
+                    <div class="discount-news-image">
+                        <img src="./images/img.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="our-services">
+                <div class="our-services-box">
+                    <div class="our-services-item">
+                        <div class="our-services-icon">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <div class="our-services-text">
+                            <h3>24/7 Customer Review</h3>
+                            <label>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, nisi.</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="our-services-box">
+                    <div class="our-services-item">
+                        <div class="our-services-icon">
+                            <i class="fa-regular fa-credit-card"></i>
+                        </div>
+                        <div class="our-services-text">
+                            <h3>Secure Payment</h3>
+                            <label>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, nisi.</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="our-services-box">
+                    <div class="our-services-item">
+                        <div class="our-services-icon">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                        </div>
+                        <div class="our-services-text">
+                            <h4>Return Guarantee</h4>
+                            <label>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, nisi.</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-box">
+                    <div class="footer-text f1">
+                        <h4>Contact</h4>
+                        <label>Address: 2017 Harron Dive</label><br>
+                        <label>City: Londra</label><br>
+                        <label>State: Maryiand</label><br>
+                        <label>Zip Code: 38000</label>
+                        <label>Phone No.: 123-456-789</label>
+                        <label>Mobile No.: 987-321-456</label>
+                    </div>
+
+                    <div class="footer-text f2">
+                        <h4>Visit Us</h4>
+                        <label>Getting Here</label><br>
+                        <label>Our Supporters</label>
+                        <label>Seating Charts</label><br>
+                        <label>Staff Directory</label>
+                        <label>Current Season</label>
+                        <label>Donor Events</label>
+                    </div>
+
+                    <div class="footer-text f3">
+                        <h4>Recent Posts</h4>
+                        <label>Breaking Down Barriers</label>
+                        <label>A Celebration of Success</label>
+                        <label>A World of Opportunities</label>
+                    </div>
+
+                    <div class="footer-text f4">
+                        <h4>Fashionasta</h4>
+                        <label>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi autem incidunt consectetur harum explicabo iste velit ab aliquam reprehenderit eaque.</label>
+                        <input type="text" placeholder="Email Address" class ="email">
+                        <button class="btn"><i class="fa-solid fa-share-from-square"></i></button>
+                        <div class="social-media">
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="./script.js"></script>
+    </body>
+</html>
