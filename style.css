@@ -123,7 +123,7 @@ span {
     font-size: 20px;
     margin-bottom: 5px;
     border-radius: 5px;
-    margin-left: 1400px;
+    margin-left: 1080px;
 }
 .trend #btn1:hover {
     cursor: pointer;
@@ -344,7 +344,7 @@ span {
 .footer-text .f1 {
     position: relative;
     bottom: 40px;
-    margin-right: 20px;
+    /* margin-right: 20px; */
 }
 .footer-text .f2 {
     position: relative;
@@ -358,11 +358,11 @@ span {
 .footer-text label {
     display: inline-block;
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 10px;
     color: rgb(199, 198, 198);
 }
 .footer-text {
-    margin: 10px 90px 10px 40px;
+    margin: 10px 50px 10px 40px;
     height: 250px;
 }
 .footer-text .f3 {
