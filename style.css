@@ -178,6 +178,11 @@ span {
     padding: 22px;
     margin-top: 22px;
 }
+.cart .newimg {
+    width: 300px;
+    height: 350px;
+    margin: 70px 40px;
+}
 .cart-text p {
     margin-top: 12px;
 }

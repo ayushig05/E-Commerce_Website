@@ -1,6 +1,5 @@
 let card = document.querySelector(".trend");
 let card2 = document.getElementById("trendSec");
-console.log(card);
 let blog = document.querySelector(".trends");
 let contacts = document.querySelector(".footer");
 let service = document.querySelector(".our-services");
@@ -81,10 +80,13 @@ function contact() {
     document.getElementById("blog").style.color = "black";
 }
 
-function show(image) {
+let x;
+function show(x) {
     let newImg = document.getElementsByClassName("newimg");
-    console.log(image);
-    newImg.scr = image.src;
+    console.log(x.src);
+    // newImg.attribute("src") = "./images/dress5.webp";
+    newImg.src = x.src;
+    console.log(newImg.src);
     document.querySelector(".cart").style.display = "flex";
     mainpg.style.display = "none";
     card.style.display = "none";
