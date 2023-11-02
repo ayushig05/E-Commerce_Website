@@ -19,9 +19,65 @@
                     <li id="blog" onclick="blogs()" class="active"><a href="#"></a>Blog</li>
                     <li id="services" onclick="services()" class="active"><a href="#"></a>Services</li>
                     <li id="contact" onclick="contact()" class="active"><a href="#"></a>Contact</li>
+                    <button class="button" id="form-open" onclick="form()">Login</button>
                     <li id="cart"><i class="fa-solid fa-cart-shopping"></i></li>
                 </ul>
             </nav>
+
+            <div class="form">
+                <div class="form-box" id="login-form" onsubmit="return check('login-form')">
+                    <form action="#" name="formfill">
+                        <h2>Login</h2>
+                        <p class="result"></p>
+                        <div class="input-box">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" name="Email" placeholder="Email/Phone Number">
+                        </div>
+                        <div class="input-box">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="Password" id="passwordField" placeholder="Password">
+                            <i class="fa-solid fa-eye-slash" onclick="togglePassword(this)"></i>
+                        </div>
+                        <div class="option_field">
+                            <span class="checkbox">
+                                <input type="checkbox" id="check">
+                                <label for="check">Remember me</label>
+                            </span>
+                            <a href="#" class="forgot">Forgot password?</a>
+                        </div>
+                        <button class="btn-form" onclick="check()">Login Now</button>
+                        <div class="login_signup">Don't have an account?<a href="#" id="signup">SignUp</a></div>
+                    </form>
+                </div>
+    
+                <!-- signup form -->
+                <div class="form-box" id="signup-form" onsubmit="return validation('signup-form')">
+                    <form action="#" name="FillForm">
+                        <h2>Register</h2>
+                        <p class="result"></p>
+                        <div class="input-box">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="Name" placeholder="Name">
+                        </div>
+                        <div class="input-box">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" name="Email" placeholder="Email/Phone Number">
+                        </div>
+                        <div class="input-box">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="Password" class="passwordField" placeholder="Password">
+                            <i class="fa-solid fa-eye-slash" onclick="togglePassword(this)"></i>
+                        </div>
+                        <div class="input-box">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="CPassword" class="passwordField" placeholder="Confirm password">
+                            <i class="fa-solid fa-eye-slash" onclick="togglePassword(this)"></i>
+                        </div>
+                        <button class="btn-form" onclick="validation()">Register</button>
+                        <div class="login_signup">Already have an account?<a href="#" id="login">Login</a></div>
+                    </form>
+                </div>
+            </div>
 
             <div class="main">
                 <div class="main-text">

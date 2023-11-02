@@ -11,7 +11,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     background-color: #ebe9e9;
-    padding: 22px;
+    padding: 20px;
 }
 .navbar .logo {
     height: 60px;
@@ -46,7 +46,7 @@ ul {
     left: 0;
     width: 100%;
     justify-content: space-between;
-    padding: 12px;
+    padding: 11px;
     color: black;
     box-shadow: 0px 2px 2px 2px rgb(181, 179, 179);
 }
@@ -55,11 +55,122 @@ ul {
     align-items: center;
 }
 .nav-links li {
-    margin: 0 30px;
+    margin: 0 15px;
+    font-size: 13px;
 }
 .nav-links li i {
     font-size: 22px;
 }
+.button {
+    padding: 6px 24px;
+    border: 2px solid black;
+    background: transparent; 
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.5s;
+}
+.button:active {
+    transform: scale(0.95);
+}
+.form {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    display: none;
+}
+.form-box {
+    position: relative;
+    width: 400px;
+    height: 550px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    background: #cccaca;
+    backdrop-filter: blur(35px);
+    padding-top: 50px;
+    margin: 20px 0;
+    display: none;
+}
+.form-box h2 {
+    text-align: center;
+    font-size: 32px;
+}
+.form-box .input-box {
+    position: relative;
+    margin: 30px 0;
+    width: 325px;
+    border-bottom: 1.5px solid rgb(97, 91, 91);
+    margin-left: 40px;
+}
+.input-box input {
+    height: 100%;
+    width: 260px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 20px 0 5px;
+    color: #333;
+    font-size: 16px;
+}
+input::placeholder {
+    color: rgb(82, 79, 79);
+}
+.input-box i {
+    font-size: 14px;
+    color: #333;
+}
+.btn-form {
+    color: #fff;
+    background: rgb(247, 156, 156);
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 50px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.5);
+}
+.option_field {
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login_signup {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+.login_signup:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.checkbox input {
+    accent-color: rgb(39, 38, 38);
+    margin-left: 38px;
+}
+.checkbox label {
+    font-size: 16px;
+    cursor: pointer;
+    color: #0b0217;
+}
+.forgot {
+    margin-right: 20px;
+}
+.forgot:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+.result {
+    color: red;
+    font-weight: 500;
+    position: relative;
+    top: 25px;
+}
+
 .main {
     display: flex;
     justify-content: space-around;
@@ -349,7 +460,6 @@ span {
 .footer-text .f1 {
     position: relative;
     bottom: 40px;
-    /* margin-right: 20px; */
 }
 .footer-text .f2 {
     position: relative;
@@ -365,6 +475,12 @@ span {
     margin-bottom: 5px;
     font-size: 10px;
     color: rgb(199, 198, 198);
+}
+.footer-text label:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: rgb(199, 198, 198);
+    text-decoration-thickness: 1px;
 }
 .footer-text {
     margin: 10px 50px 10px 40px;
