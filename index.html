@@ -19,12 +19,13 @@
                     <li id="blog" onclick="blogs()" class="active"><a href="#"></a>Blog</li>
                     <li id="services" onclick="services()" class="active"><a href="#"></a>Services</li>
                     <li id="contact" onclick="contact()" class="active"><a href="#"></a>Contact</li>
-                    <button class="button" id="form-open" onclick="form()">Login</button>
+                    <button class="button-login" id="form-open" onclick="form()">Login</button>
                     <li id="cart"><i class="fa-solid fa-cart-shopping"></i></li>
                 </ul>
             </nav>
 
             <div class="form">
+                <!-- login form -->
                 <div class="form-box" id="login-form" onsubmit="return check('login-form')">
                     <form action="#" name="formfill">
                         <h2>Login</h2>
@@ -45,7 +46,7 @@
                             </span>
                             <a href="#" class="forgot">Forgot password?</a>
                         </div>
-                        <button class="btn-form" onclick="check()">Login Now</button>
+                        <button class="btn-form" type="submit">Login Now</button>
                         <div class="login_signup">Don't have an account?<a href="#" id="signup">SignUp</a></div>
                     </form>
                 </div>
@@ -73,7 +74,7 @@
                             <input type="password" name="CPassword" class="passwordField" placeholder="Confirm password">
                             <i class="fa-solid fa-eye-slash" onclick="togglePassword(this)"></i>
                         </div>
-                        <button class="btn-form" onclick="validation()">Register</button>
+                        <button class="btn-form" type="submit">Register</button>
                         <div class="login_signup">Already have an account?<a href="#" id="login">Login</a></div>
                     </form>
                 </div>
@@ -301,7 +302,7 @@
                             <i class="fa-solid fa-dollar-sign"></i>
                         </div>
                         <div class="our-services-text">
-                            <h4>Return Guarantee</h4>
+                            <h3>Return Guarantee</h3>
                             <label>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, nisi.</label>
                         </div>
                     </div>

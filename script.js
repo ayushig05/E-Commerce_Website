@@ -6,106 +6,68 @@ let service = document.querySelector(".our-services");
 let mainpg = document.querySelector(".main");
 let discount = document.querySelector(".discount-news");
 
+let loginForm = document.getElementById("login-form");
+let signupForm = document.getElementById("signup-form");
+let loginButton = document.getElementById("form-open");
+let loginLink = document.getElementById("login");
+let signupLink = document.getElementById("signup");
+let send = document.querySelector(".result");
+
 function home() {
-    mainpg.style.display = "flex";
+    showPage("home");
     card.style.display = "block";
     card2.style.display = "block";
     blog.style.display = "block";
     contacts.style.display = "block";
     service.style.display = "flex";
     discount.style.display = "block";
-    loginForm.style.display = "none";
-    signupForm.style.display = "none";
-    document.getElementById("home").style.color = "rgb(138, 110, 71)";
-    document.getElementById("blog").style.color = "black";
-    document.getElementById("category").style.color = "black";
-    document.getElementById("services").style.color = "black";
-    document.getElementById("contact").style.color = "black";
 }
 
 function category() {
-    mainpg.style.display = "none";
-    card.style.display = "block";
-    card2.style.display = "block";
-    blog.style.display = "none";
-    contacts.style.display = "none";
-    service.style.display = "none";
-    discount.style.display = "none";
-    loginForm.style.display = "none";
-    signupForm.style.display = "none";
-    document.getElementById("category").style.color = "rgb(138, 110, 71)";
-    document.getElementById("home").style.color = "black";
-    document.getElementById("blog").style.color = "black";
-    document.getElementById("services").style.color = "black";
-    document.getElementById("contact").style.color = "black";
+    showPage("category");
 }
 
 function blogs() {
-    mainpg.style.display = "none";
-    card.style.display = "none";
-    card2.style.display = "none";
-    blog.style.display = "block";
-    contacts.style.display = "none";
-    service.style.display = "none";
-    discount.style.display = "none";
-    loginForm.style.display = "none";
-    signupForm.style.display = "none";
-    document.getElementById("blog").style.color = "rgb(138, 110, 71)";
-    document.getElementById("home").style.color = "black";
-    document.getElementById("category").style.color = "black";
-    document.getElementById("services").style.color = "black";
-    document.getElementById("contact").style.color = "black";
+    showPage("blogs");
 }
 
 function services() {
-    mainpg.style.display = "none";
-    card.style.display = "none";
-    card2.style.display = "none";
-    blog.style.display = "none";
-    contacts.style.display = "none";
-    service.style.display = "flex";
-    discount.style.display = "none";
-    loginForm.style.display = "none";
-    signupForm.style.display = "none";
-    document.getElementById("services").style.color = "rgb(138, 110, 71)";
-    document.getElementById("home").style.color = "black";
-    document.getElementById("category").style.color = "black";
-    document.getElementById("contact").style.color = "black";
-    document.getElementById("blog").style.color = "black";
+    showPage("services");
 }
 
 function contact() {
-    mainpg.style.display = "none";
-    card.style.display = "none";
-    card2.style.display = "none";
-    blog.style.display = "none";
-    contacts.style.display = "block";
-    discount.style.display = "none";
+    showPage("contact");
+}
+
+function showPage(page) {
+    mainpg.style.display = page === "home" ? "flex" : "none";
+    card.style.display = page === "category" ? "block" : "none";
+    card2.style.display = page === "category" ? "block" : "none";
+    blog.style.display = page === "blogs" ? "block" : "none";
+    contacts.style.display = page === "contact" ? "block" : "none";
+    service.style.display = page === "services" ? "flex" : "none";
+    discount.style.display = page === "home" ? "block" : "none";
     loginForm.style.display = "none";
     signupForm.style.display = "none";
-    document.getElementById("contact").style.color = "rgb(138, 110, 71)";
-    document.getElementById("home").style.color = "black";
-    document.getElementById("category").style.color = "black";
-    document.getElementById("services").style.color = "black";
-    document.getElementById("blog").style.color = "black";
+    updateNavStyles(page);
+}
+
+function updateNavStyles(activePage) {
+    const navItems = ["home", "category", "blogs", "services", "contact"];
+    navItems.forEach(item => {
+        const element = document.getElementById(item);
+        if (element) {
+            element.style.color = item === activePage ? "rgb(138, 110, 71)" : "black";
+        }
+    });
 }
 
 let x;
 function show(x) {
-    let newImg = document.getElementsByClassName("newimg");
-    console.log(x.src);
+    let newImg = document.querySelector(".newimg");
     newImg.src = x.src;
-    console.log(newImg.src);
     document.querySelector(".cart").style.display = "flex";
-    mainpg.style.display = "none";
-    card.style.display = "none";
-    card2.style.display = "none";
-    blog.style.display = "none";
-    contacts.style.display = "none";
-    service.style.display = "none";
-    discount.style.display = "none";
-    loginForm.style.display = "none";
-    signupForm.style.display = "none";
+    showPage("none");
 }
 
 function addcart() {
@@ -113,46 +75,13 @@ function addcart() {
     location.reload();
 }
 
-let loginForm = document.getElementById("login-form");
-let signupForm = document.getElementById("signup-form");
-let loginButton = document.getElementById("form-open");
-let loginLink = document.getElementById("login");
-let signupLink = document.getElementById("signup");
-
 function form() {
     loginForm.style.display = "flex";
     signupForm.style.display = "none";
-    mainpg.style.display = "none";
-    card.style.display = "none";
-    card2.style.display = "none";
-    blog.style.display = "none";
-    contacts.style.display = "none";
-    service.style.display = "none";
-    discount.style.display = "none";
-    document.getElementById("home").style.color = "black";
-    document.getElementById("blog").style.color = "black";
-    document.getElementById("category").style.color = "black";
-    document.getElementById("services").style.color = "black";
-    document.getElementById("contact").style.color = "black";
+    showPage("none");
 }
 loginButton.addEventListener("click", form);
-signupLink.addEventListener("click", function (event) {
-    event.preventDefault(); 
-    signupForm.style.display = "flex";
-    loginForm.style.display = "none";
-    mainpg.style.display = "none";
-    card.style.display = "none";
-    card2.style.display = "none";
-    blog.style.display = "none";
-    contacts.style.display = "none";
-    service.style.display = "none";
-    discount.style.display = "none";
-    document.getElementById("home").style.color = "black";
-    document.getElementById("blog").style.color = "black";
-    document.getElementById("category").style.color = "black";
-    document.getElementById("services").style.color = "black";
-    document.getElementById("contact").style.color = "black";
-});
+signupLink.addEventListener("click", form);
 
 function check() {
     let email_login = document.formfill.Email.value;
@@ -171,7 +100,10 @@ function check() {
         result.innerHTML = "Password must be at least 6 characters*";
         return false;
     }
-    return true;
+    if (email_login !== "" || password_login !== "") {
+        result.textContent = "Your message has been sent!";
+        window.alert("Your message has been sent!");
+    }
 }
 
 function validation() {
@@ -209,7 +141,10 @@ function validation() {
         resultElement.innerHTML = "Password doesn't match*";
         return false;
     }
-    return true;
+    if (email_login !== "" || password_login !== "") {
+        result.textContent = "Your message has been sent!";
+        window.alert("Your message has been sent!");
+    }
 }
 
 function togglePassword(icon) {
@@ -225,13 +160,13 @@ function togglePassword(icon) {
     }
 }
 
-loginLink.addEventListener("click", function form(x) {
-    x.preventDefault();
+loginLink.addEventListener("click", function form(event) {
+    event.preventDefault();
     loginForm.style.display = "block";
     signupForm.style.display = "none";
 });
-signupLink.addEventListener("click", function form(x) {
-    x.preventDefault();
+signupLink.addEventListener("click", function form(event) {
+    event.preventDefault();
     loginForm.style.display = "none";
     signupForm.style.display = "block";
 });
