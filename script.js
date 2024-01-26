@@ -12,6 +12,7 @@ let loginButton = document.getElementById("form-open");
 let loginLink = document.getElementById("login");
 let signupLink = document.getElementById("signup");
 let send = document.querySelector(".result");
+let forms = document.querySelector(".form");
 
 function home() {
     showPage("home");
@@ -75,13 +76,9 @@ function addcart() {
     location.reload();
 }
 
-function form() {
-    loginForm.style.display = "flex";
-    signupForm.style.display = "none";
-    showPage("none");
-}
-loginButton.addEventListener("click", form);
-signupLink.addEventListener("click", form);
+loginButton.addEventListener("click", ()=> form());
+signupLink.addEventListener("click", ()=> display());
+loginLink.addEventListener("click", ()=> display());
 
 function check() {
     let email_login = document.formfill.Email.value;
@@ -111,7 +108,7 @@ function validation() {
     let email = document.FillForm.Email.value;
     let password = document.FillForm.Password.value;
     let confirmPassword = document.FillForm.CPassword.value;
-    let resultElement = document.querySelector(".result");
+    let resultElement = document.querySelector(".result1");
     resultElement.innerHTML = "";
     if (username === "") {
         resultElement.innerHTML = "Enter Name*";
@@ -141,7 +138,7 @@ function validation() {
         resultElement.innerHTML = "Password doesn't match*";
         return false;
     }
-    if (email_login !== "" || password_login !== "") {
+    if (email !== "" || password !== "" || confirmPassword !== "") {
         result.textContent = "Your message has been sent!";
         window.alert("Your message has been sent!");
     }
@@ -160,13 +157,33 @@ function togglePassword(icon) {
     }
 }
 
-loginLink.addEventListener("click", function form(event) {
-    event.preventDefault();
-    loginForm.style.display = "block";
-    signupForm.style.display = "none";
-});
-signupLink.addEventListener("click", function form(event) {
-    event.preventDefault();
-    loginForm.style.display = "none";
-    signupForm.style.display = "block";
-});
+function form() {
+    forms.classList.toggle("disp1");
+    disableScroll();
+}
+
+function display() {
+    loginForm.classList.toggle("disp2");
+    signupForm.classList.toggle("disp2");
+}
+
+function enableScroll() {
+    window.onscroll = function () { };
+}
+
+function disableScroll() {
+    scrollTop =
+        window.scrollY ||
+        document.documentElement.scrollTop;
+    scrollLeft =
+        window.screenX ||
+        document.documentElement.scrollLeft,
+        window.onscroll = function () {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+}
+
+function closeForms() {
+    enableScroll();
+    forms.classList.toggle("disp1");
+}

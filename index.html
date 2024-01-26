@@ -19,14 +19,14 @@
                     <li id="blog" onclick="blogs()" class="active"><a href="#"></a>Blog</li>
                     <li id="services" onclick="services()" class="active"><a href="#"></a>Services</li>
                     <li id="contact" onclick="contact()" class="active"><a href="#"></a>Contact</li>
-                    <button class="button-login" id="form-open" onclick="form()">Login</button>
+                    <button class="button-login" id="form-open">Login</button>
                     <li id="cart"><i class="fa-solid fa-cart-shopping"></i></li>
                 </ul>
             </nav>
 
             <div class="form">
                 <!-- login form -->
-                <div class="form-box" id="login-form" onsubmit="return check('login-form')">
+                <div class="form-box disp2" id="login-form" onsubmit="return check('login-form')">
                     <form action="#" name="formfill">
                         <h2>Login</h2>
                         <p class="result"></p>
@@ -47,7 +47,7 @@
                             <a href="#" class="forgot">Forgot password?</a>
                         </div>
                         <button class="btn-form" type="submit">Login Now</button>
-                        <div class="login_signup">Don't have an account?<a href="#" id="signup">SignUp</a></div>
+                        <div class="login_signup">Don't have an account? <a href="#" id="signup">SignUp</a></div>
                     </form>
                 </div>
     
@@ -55,7 +55,7 @@
                 <div class="form-box" id="signup-form" onsubmit="return validation('signup-form')">
                     <form action="#" name="FillForm">
                         <h2>Register</h2>
-                        <p class="result"></p>
+                        <p class="result1"></p>
                         <div class="input-box">
                             <i class="fa-solid fa-user"></i>
                             <input type="text" name="Name" placeholder="Name">
@@ -75,9 +75,10 @@
                             <i class="fa-solid fa-eye-slash" onclick="togglePassword(this)"></i>
                         </div>
                         <button class="btn-form" type="submit">Register</button>
-                        <div class="login_signup">Already have an account?<a href="#" id="login">Login</a></div>
+                        <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
                     </form>
                 </div>
+                <div class="closeBtn" onclick="closeForms()">X</div>
             </div>
 
             <div class="main">
